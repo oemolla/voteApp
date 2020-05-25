@@ -1,5 +1,5 @@
 import {sortType} from "../commonTypes";
-import {ActionTypes} from '../actionTypes';
+import {ActionTypes} from '../actions/actionTypes';
 import {initialData} from '../stores/context';
 
 export default function appReducer(state = initialData, action) {

@@ -36,6 +36,7 @@ export const LinkPoint = styled.div`
     align-items:center;
     border-radius: 5px;
     margin-right: 40px;
+    align-self: flex-start;
     flex-direction: column;
     border: 2px solid #c7c7c7;
     background-color: #f4f4f4;
@@ -51,6 +52,7 @@ export const LinkPoint = styled.div`
 export const LinkArea = styled.div`
     flex: 1;
     display: flex;
+    overflow:hidden;
     flex-direction: column;
     justify-content: space-between;
 `;
