@@ -19,7 +19,7 @@ export const Pagination = () => {
       totalPage.push(i);
     }
     createPager(totalPage);
-  },[links]);
+  },[maxPage]);
 
   const next = () => {
     setCurrentPage((currentPage) => Math.min(currentPage + 1, maxPage -1));
@@ -42,20 +42,22 @@ export const Pagination = () => {
     sendCurrentPage(currentPage);
   }, [currentPage]);
 
-  const renderPagination = pager.map((item, index) => {
+  const renderPaginationItem = pager.map((item, index) => {
     return <PaginationItem active={currentPage === index} key={item}
                            onClick={() => jump(index)}>{item}</PaginationItem>;
   });
 
+  const renderPagination = maxPage > 1 && <PaginationWrapper>
+    <PaginationItem onClick={() => prev()}>
+      <LeftOutlined/>
+    </PaginationItem>
+    {renderPaginationItem}
+    <PaginationItem onClick={() => next()}>
+      <RightOutlined/>
+    </PaginationItem>
+  </PaginationWrapper>;
+
   return (
-      <PaginationWrapper>
-        <PaginationItem onClick={() => prev()}>
-          <LeftOutlined/>
-        </PaginationItem>
-        {renderPagination}
-        <PaginationItem onClick={() => next()}>
-          <RightOutlined/>
-        </PaginationItem>
-      </PaginationWrapper>
+      renderPagination
   );
 };

@@ -1,19 +1,20 @@
 import React from 'react';
-import {PlusOutlined} from '@ant-design/icons';
 
-import { LinkList , SortSelect , AppModal ,Pagination} from '../../components';
+import {
+  LinkList,
+  AppModal,
+  FormLink,
+  SortSelect,
+  Pagination
+} from '../../components';
 
-import { HomeContainer,LinkTo,PlusIcon } from './Home.style';
+import { HomeContainer } from './Home.style';
 
 const Home = () => {
   return (
     <>
       <HomeContainer>
-        <LinkTo to='/submit-form'>
-          <PlusIcon className='plus-icon'>
-            <PlusOutlined />
-          </PlusIcon>submit a link
-        </LinkTo>
+        <FormLink/>
         <SortSelect/>
         <LinkList />
         <AppModal/>

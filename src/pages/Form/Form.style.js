@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const FormContainer = styled.div`
   width: 40%;
   margin: 30px auto;
+   @media (max-width:992px){
+    width: 95%;
+  }
 `;
 
 export const FormTitle = styled.h1`

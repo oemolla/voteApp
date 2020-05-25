@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 
 import {SubmitForm} from '../../components';
