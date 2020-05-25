@@ -48,7 +48,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx eslint src/*.js --fix-dry-run && yarn test"
+      "pre-commit": ""
     }
   }
 }
