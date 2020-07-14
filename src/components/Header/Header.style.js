@@ -6,6 +6,10 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #f1f1f1;
+  
+  img {
+    width:150px;
+  }
 `;
 
 export const HeaderTitle = styled.h2`
